@@ -90,19 +90,19 @@ service over 12 months. Change any of these and the dollar figures move; the ROI
 
 ## Limitations
 
-1. **Synthetic population** 15,000 simulated patients with generated behavior patterns; real
+1. **Synthetic population:** 15,000 simulated patients with generated behavior patterns; real
    patient populations will have messier, less monotonic relationships between the features here
    and actual no-show behavior.
-2. **Cost assumptions are illustrative, not measured** the 35% risk-reduction figure in particular
+2. **Cost assumptions are illustrative, not measured:** the 35% risk-reduction figure in particular
    is a literature-based assumption, not something observed in a pilot. Any real budget conversation
    needs a pilot program or a literature review specific to the services in question, not this
    number taken at face value.
-3. **No fairness/subgroup audit yet** access-barrier features (transportation, language,
+3. **No fairness/subgroup audit yet:** access-barrier features (transportation, language,
    distance) are meaningful predictors here, which is clinically expected, but also means an audit
    of false-negative rates across these same subgroups hasn't been done. This is the same category
    of gap flagged in the LOS Prediction project's fairness section, and should be treated the same
    way before deployment: a concrete to-do, not a footnote.
-4. **Single time horizon** the model predicts missing the *next* service, not a longer-term
+4. **Single time horizon:** the model predicts missing the *next* service, not a longer-term
    trajectory of disengagement; it doesn't distinguish a one-off missed appointment from a patient
    who's dropping out of care entirely.
 
