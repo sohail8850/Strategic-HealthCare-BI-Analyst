@@ -4,7 +4,7 @@
 
 Portfolio of healthcare data analytics projects covering cost & quality, access & network adequacy, chronic disease management, and BI architecture — each with a working repository, an interactive dashboard, and a written case study.
 
-**Live site:** [sohail5993.github.io/Strategic-HealthCare-BI-Analyst](https://sohail5993.github.io/Strategic-HealthCare-BI-Analyst/)
+**Live site:** [sohail8850.github.io/Strategic-HealthCare-BI-Analyst](https://sohail5993.github.io/Strategic-HealthCare-BI-Analyst/)
 
 ## Projects
 
