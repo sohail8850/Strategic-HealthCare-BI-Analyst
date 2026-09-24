@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Care-Gap Prediction for Chronic Disease Management — Strategic HealthCare BI Analyst</title>
+<title>Care-Gap Prediction for Chronic Disease Management  Strategic HealthCare BI Analyst</title>
 <meta name="description" content="Identifies which chronic disease patients are likely to miss their next guideline-recommended screening or follow-up.">
 <link rel="icon" type="image/png" href="../assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,20 +47,20 @@
     <section class="case-study wrap">
       <h3>The problem</h3>
       <p>
-        Chronic disease management runs on guideline-recommended screenings and follow-ups —
+        Chronic disease management runs on guideline-recommended screenings and follow-ups 
         HbA1c tests, diabetic eye and foot exams, nephropathy screening, cardiology and
         pulmonary follow-ups. When a patient misses one, the miss is usually silent until it
         turns into a complication: retinopathy that could have been caught early, a CKD
         patient who progresses further before the next visit, a heart failure readmission
         after a missed weight check. A care-management team can only proactively call a
         fraction of an open care-gap registry each cycle, so the real question isn't who has
-        an open gap — it's who will actually miss it if nobody calls first.
+        an open gap  it's who will actually miss it if nobody calls first.
       </p>
 
       <h3>The approach</h3>
       <p>
         A synthetic population of 15,000 chronic disease patients (diabetes, hypertension,
-        CHF, CKD, COPD) was built with realistic utilization, adherence, and access features —
+        CHF, CKD, COPD) was built with realistic utilization, adherence, and access features 
         appointment no-show history, medication adherence, transportation barriers, telehealth
         enrollment, and reminder timing. Three models (logistic regression, random forest,
         XGBoost) were trained to predict whether a patient will miss their next guideline-due
@@ -72,8 +72,8 @@
       <h3>The result</h3>
       <p>
         The best model reached 0.716 ROC-AUC and delivered 70% precision in the top 10% risk
-        tier against a 34.6% base rate — a 2x lift. The top SHAP drivers — days since
-        last visit, prior no-show history, reminder staleness, and medication adherence —
+        tier against a 34.6% base rate  a 2x lift. The top SHAP drivers  days since
+        last visit, prior no-show history, reminder staleness, and medication adherence 
         are almost entirely operational levers, not clinical severity markers, meaning most of
         this gap is closeable through outreach timing rather than a different care plan.
         Targeting just the top 5% highest-risk patients produced the best return of any
