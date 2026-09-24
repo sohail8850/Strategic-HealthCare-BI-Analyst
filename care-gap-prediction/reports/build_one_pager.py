@@ -291,7 +291,7 @@ story.append(HRFlowable(width="100%", thickness=0.6, color=colors.HexColor("#d0d
 story.append(Paragraph(
     "All patient data is synthetically generated for portfolio demonstration and contains no real patient records.<br/>"
     "strategichealthcarebianalyst@gmail.com &nbsp;|&nbsp; linkedin.com/in/aimms-consulting-35895439 &nbsp;|&nbsp; "
-    "sohail5993.github.io/Strategic-HealthCare-BI-Analyst/",
+    "sohail8850.github.io/Strategic-HealthCare-BI-Analyst/",
     styles["FooterStyle"]))
 
 doc.build(story)
