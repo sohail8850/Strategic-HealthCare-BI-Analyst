@@ -1,18 +1,10 @@
 # Care-Gap Prediction for Chronic Disease Management
 
-**Identifying which chronic-disease patients are most likely to miss their next screening or
-follow-up service  before the gap opens.**
+**Identifying which chronic-disease patients are most likely to miss their next screening or follow-up service before the gap opens.**
 
 ## The business problem
 
-Chronic disease programs (diabetes, CKD, hypertension, COPD) run on a steady cadence of screenings
-and follow-ups  HbA1c tests, retinal exams, flu vaccinations, medication refills. Care management<img width="1351" height="752" alt="image" src="https://github.com/user-attachments/assets/68e021cc-2516-4501-802e-4ba4fbbc8e49" />
-
-teams can't call every patient in a 50,000-person panel every month, so the real question isn't
-"who has an open care gap" (that's just a query)  it's **who is actually going to miss their next
-one, so outreach capacity gets spent on the patients who need it, not the ones who'd have shown up
-anyway.**
-
+Chronic disease programs (diabetes, CKD, hypertension, COPD) run on a steady cadence of screenings and follow-ups: HbA1c tests, retinal exams, flu vaccinations, medication refills. Care management teams can't call every patient in a 50,000-person panel every month, so the real question isn't "who has an open care gap?" (that's just a query); it's **who is actually going to miss their next one, so outreach capacity gets spent on the patients who need it, not the ones who'd have shown up anyway.**
 This project builds a model to answer that question and translates it into a capacity-constrained
 outreach plan: given a fixed number of outreach calls a care team can realistically make, who
 should get one?
