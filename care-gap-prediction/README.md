@@ -1,7 +1,9 @@
 # Care-Gap Prediction for Chronic Disease Management
-
+  
 **Identifying which chronic-disease patients are most likely to miss their next screening or follow-up service before the gap opens.**
-
+  
+**One-pager:** [Care_Gap_Prediction_One_Pager.pdf](reports/Care_Gap_Prediction_One_Pager.pdf)
+  
 ## The business problem
 
 Chronic disease programs (diabetes, CKD, hypertension, COPD) run on a steady cadence of screenings and follow-ups: HbA1c tests, retinal exams, flu vaccinations, medication refills. Care management teams can't call every patient in a 50,000-person panel every month, so the real question isn't "who has an open care gap?" (that's just a query); it's **who is actually going to miss their next one, so outreach capacity gets spent on the patients who need it, not the ones who'd have shown up anyway.**
@@ -30,7 +32,7 @@ README.md  -- this file
 
 | Stage | What was built |
 |---|---|
-| Feature engineering | 39 features from 19 raw fields  adherence history, no-show pattern, access barriers, engagement signals |
+| Feature engineering | 39 features from 19 raw fields: adherence history, no-show pattern, access barriers, engagement signals |
 | Modeling | Logistic Regression, Random Forest, XGBoost  compared on a 12,000/3,000 train/test split |
 | Explainability | SHAP feature importance on the best model |
 | Business translation | Capacity-tiered outreach simulation with a documented, illustrative cost model |
@@ -38,45 +40,39 @@ README.md  -- this file
 ## Modeling results
 
 **Target:** will this patient miss their next scheduled service? (`missed_next_service`, base rate
-**34.6%**  not a rare-event problem like the extended-stay classifiers elsewhere in this
+**34.6%**, not a rare-event problem like the extended-stay classifiers elsewhere in this
 portfolio, which is part of why simpler models hold up well here.)
 
 | Model | ROC-AUC | PR-AUC | Precision @ top 10% | Precision @ top 20% |
 |---|---|---|---|---|
-| **Logistic Regression** | **0.716** | **0.583** | **0.70** | 0.613 |
+| **Logistic Regression** | **0.716** | **0.583** | **0.70** | **0.613** |
 | Random Forest | 0.711 | 0.569 | 0.66 | 0.595 |
 | XGBoost | 0.707 | 0.567 | 0.683 | **0.602** |
 
-The linear model wins here, and it's worth saying plainly why rather than defaulting to "XGBoost is
-usually better": with a 35% base rate and mostly monotonic risk factors (longer since last visit,
-more prior no-shows → higher risk), there isn't much non-linear interaction for a tree ensemble to
-exploit, and the simpler model generalizes at least as well on this synthetic panel. **Precision at
-the top 10% (0.70)** is the operationally relevant number  call the 10% of the panel the model
-flags as highest-risk, and 7 in 10 of those calls reach someone who genuinely would have missed
-their service.
+The three models are within sampling noise of each other (AUC gaps under 0.01 on a 3,000-patient test set), so the simpler, more interpretable logistic regression is the sensible choice. It's worth saying plainly why, rather than defaulting to "XGBoost is usually better": with a 35% base rate and mostly monotonic risk factors (longer since last visit, more prior no-shows → higher risk), there isn't much non-linear interaction for a tree ensemble to exploit, and the simpler model generalizes at least as well on this synthetic panel. **Precision at the top 10% (0.70)** is the operationally relevant number: call the 10% of the panel the model flags as highest-risk, and 7 in 10 of those calls reach someone who genuinely would have missed their service.
 
 ### What drives the prediction (SHAP)
 
 Ranked by mean absolute SHAP value, the top drivers are **days since last visit**, **prior no-show
 history**, **days since the last reminder was sent**, **number of open care gaps**, and
-**medication adherence (PDC)**  followed by access barriers (transportation, distance to clinic,
+medication adherence (PDC), followed by access barriers (transportation, distance to clinic,
 having a reminder contact on file, having an assigned PCP, language barrier). This matches clinical
 intuition: recency and engagement history dominate, and structural access barriers matter but are
 secondary to whether the patient is already disengaging.
 
-## Business impact translation capacity-tiered, not one number
+## Business impact translation: capacity-tiered, not one number
 
 Rather than a single "here's the savings" figure, the model is evaluated at five different outreach
 capacity levels, because a care team's real constraint is *how many calls they can make*, not
 whether the model works:
 
-| Outreach capacity (% of panel enrolled) | Precision | Annualized net savings* | ROI |
+| Outreach capacity (% of panel enrolled) | Precision | Annualized net savings* | net ROI |
 |---|---|---|---|
-| 5% | 78.7% | $878,300 | **6.4x** |
-| 10% | 70.0% | $1,527,200 | 5.7x |
-| 15% | 64.4% | $2,070,300 | 5.25x |
-| 20% | 61.3% | $2,595,800 | 4.99x |
-| 30% | 56.1% | $3,479,100 | 4.57x |
+| 5% | 78.7% | $878,300 | 5.40x** |
+| 10% | 70.0% | $1,527,200 | 4.70x |
+| 15% | 64.4% | $2,070,300 | 4.25x |
+| 20% | 61.3% | $2,595,800 | 3.99x |
+| 30% | 56.1% | $3,479,100 | 3.57x |
 
 *Annualized to a 50,000-patient panel, using the test set's precision at each tier scaled up.
 
@@ -105,6 +101,7 @@ service over 12 months. Change any of these and the dollar figures move; the ROI
 4. **Single time horizon:** the model predicts missing the *next* service, not a longer-term
    trajectory of disengagement; it doesn't distinguish a one-off missed appointment from a patient
    who's dropping out of care entirely.
+5. "Tier-level precision is estimated from a 3,000-patient test set (150 patients at the 5% tier), so the dollar figures carry meaningful sampling uncertainty."
 
 ## What would come next
 
