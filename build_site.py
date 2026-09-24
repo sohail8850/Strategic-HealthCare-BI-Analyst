@@ -1,6 +1,6 @@
 """
 Generates the multi-page static site from shared header/nav/footer + per-page
-content. Output is plain .html files with no JS/build dependency at runtime —
+content. Output is plain .html files with no JS/build dependency at runtime 
 this script is just an authoring convenience, not part of the shipped site.
 """
 import os
@@ -30,7 +30,7 @@ PAGE_HEAD = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title} — Strategic HealthCare BI Analyst</title>
+<title>{title}  Strategic HealthCare BI Analyst</title>
 <meta name="description" content="{description}">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,13 +94,13 @@ def write_page(filename, title, description, body_html):
 write_page(
     "index.html",
     "Home",
-    "Healthcare data science portfolio — turning clinical, operational, and claims data into decisions hospitals can act on.",
+    "Healthcare data science portfolio  turning clinical, operational, and claims data into decisions hospitals can act on.",
     """
     <section class="hero wrap">
       <h1>I turn messy hospital data into decisions someone can act on Monday morning.</h1>
       <p class="lede">
-        Every project here starts with a question a hospital actually pays to answer —
-        readmissions, cost overruns, care-quality gaps — and works it through end to end:
+        Every project here starts with a question a hospital actually pays to answer 
+        readmissions, cost overruns, care-quality gaps  and works it through end to end:
         the data, the model, why it can be trusted, and what it's worth in dollars.
       </p>
     </section>
@@ -117,14 +117,14 @@ write_page(
         <div class="pillar-rule" style="background:#C96F14;"></div>
         <div class="pillar-body">
           <h3>Strategic Translation</h3>
-          <p>Every model ends in a dollar figure and an operational recommendation — not just an AUC score nobody outside the data team can use.</p>
+          <p>Every model ends in a dollar figure and an operational recommendation  not just an AUC score nobody outside the data team can use.</p>
         </div>
       </div>
       <div class="pillar">
         <div class="pillar-rule" style="background:#6C3483;"></div>
         <div class="pillar-body">
           <h3>Healthcare Domain Depth</h3>
-          <p>Built around the real constraints hospitals operate under — HRRP penalties, care-management capacity, and what clinicians will actually trust.</p>
+          <p>Built around the real constraints hospitals operate under  HRRP penalties, care-management capacity, and what clinicians will actually trust.</p>
         </div>
       </div>
     </section>
@@ -161,7 +161,7 @@ write_page(
 write_page(
     "about.html",
     "About",
-    "About Strategic HealthCare BI Analyst — background, focus, and how I work.",
+    "About Strategic HealthCare BI Analyst  background, focus, and how I work.",
     """
     <section class="page-header wrap">
       <h1>About</h1>
@@ -177,31 +177,31 @@ write_page(
         can actually act on.
       </p>
       <p>
-        That focus isn't just a specialization — it's backed by dedicated study across
+        That focus isn't just a specialization  it's backed by dedicated study across
         medical billing and coding, genomic data analysis, and pharmaceutical and medical
         device commercialization, layered on top of enterprise-grade credentials in BI
         platforms (Power BI, Tableau, Google Business Intelligence), data science (Google
         Data Analytics, Executive Data Science, Johns Hopkins' data science series), and
         systems delivery (SAP, Google Project Management, Google Cybersecurity). The
         combination is deliberate: healthcare analytics fails when it's only technical or
-        only strategic — it has to be both.
+        only strategic  it has to be both.
       </p>
       <p>
-        What I care about isn't the model — it's whether a hospital can act on it.
+        What I care about isn't the model  it's whether a hospital can act on it.
         A 0.90 AUC that nobody trusts is worth less than a 0.68 AUC that a care-management
         team actually uses. That's the standard every project on this site is held to.
       </p>
 
       <h2>How I work</h2>
       <ul class="prose-list">
-        <li>Start from the business question, not the dataset — the model serves the decision, not the other way around.</li>
-        <li>Report honest performance ceilings, not inflated metrics — healthcare stakeholders can tell the difference, and trust is the whole point.</li>
+        <li>Start from the business question, not the dataset  the model serves the decision, not the other way around.</li>
+        <li>Report honest performance ceilings, not inflated metrics  healthcare stakeholders can tell the difference, and trust is the whole point.</li>
         <li>Every deliverable ends with a number a finance or operations leader can act on.</li>
       </ul>
 
       <h2>Background</h2>
       <p>
-        Over 10+ years, I've built a deliberately cross-functional foundation —
+        Over 10+ years, I've built a deliberately cross-functional foundation 
         strategic management and decision science from Wharton and Copenhagen Business
         School, applied data science from Johns Hopkins, enterprise BI and cybersecurity
         from Google, SAP, and Microsoft, and healthcare-specific grounding in billing,
@@ -218,7 +218,7 @@ write_page(
 write_page(
     "approach.html",
     "Approach",
-    "The analytical approach behind every project — from business question to measurable impact.",
+    "The analytical approach behind every project  from business question to measurable impact.",
     """
     <section class="page-header wrap">
       <h1>Approach</h1>
@@ -239,7 +239,7 @@ write_page(
         <div class="step-body">
           <span class="step-num">02</span>
           <h3>Engineer clinically-grounded features</h3>
-          <p>Features come from how clinicians and care managers actually think about risk — prior utilization, discharge disposition, comorbidity burden — not just whatever columns happen to be in the file.</p>
+          <p>Features come from how clinicians and care managers actually think about risk  prior utilization, discharge disposition, comorbidity burden  not just whatever columns happen to be in the file.</p>
         </div>
       </div>
       <div class="step">
@@ -272,24 +272,24 @@ CERTIFICATIONS = [
         "items": [
             {
                 "name": "Medical Billing and Coding Fundamentals",
-                "issuer": "Coursera — MedCerts",
+                "issuer": "Coursera  MedCerts",
                 "year": "2024",
                 "link": "https://coursera.org/verify/specialization/LRSZ1A3W8B1O",
-                "blurb": "ICD-10, CPT, and HCPCS classification systems alongside revenue cycle management — standardizing clinical diagnoses and procedure data for claims analysis, reimbursement modeling, and fraud detection.",
+                "blurb": "ICD-10, CPT, and HCPCS classification systems alongside revenue cycle management  standardizing clinical diagnoses and procedure data for claims analysis, reimbursement modeling, and fraud detection.",
             },
             {
                 "name": "Introduction to Genomic Technologies",
-                "issuer": "Coursera — Johns Hopkins University",
+                "issuer": "Coursera  Johns Hopkins University",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/JK2DLNKD37YK",
-                "blurb": "Computational molecular biology, high-throughput sequencing analysis, and genomic algorithms — enabling extraction and processing of genetic data to advance precision medicine and personalized care strategies.",
+                "blurb": "Computational molecular biology, high-throughput sequencing analysis, and genomic algorithms  enabling extraction and processing of genetic data to advance precision medicine and personalized care strategies.",
             },
             {
                 "name": "Pharmaceutical and Medical Device Innovations",
-                "issuer": "Coursera — University of Minnesota",
+                "issuer": "Coursera  University of Minnesota",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/F22U6KDZWSQV",
-                "blurb": "The end-to-end commercialization lifecycle, FDA regulatory pathways, IP protection, and market access strategy — domain context for modeling drug performance and clinical technology adoption.",
+                "blurb": "The end-to-end commercialization lifecycle, FDA regulatory pathways, IP protection, and market access strategy  domain context for modeling drug performance and clinical technology adoption.",
             },
         ],
     },
@@ -299,66 +299,66 @@ CERTIFICATIONS = [
         "items": [
             {
                 "name": "Google Data Analytics",
-                "issuer": "Coursera — Google Career Certificate",
+                "issuer": "Coursera  Google Career Certificate",
                 "year": "2025",
                 "link": "https://coursera.org/verify/professional-cert/Y5UV9UGQ26V9",
-                "blurb": "The end-to-end analytical workflow from data cleaning and SQL querying to R programming and visualization — transforming complex electronic health records into clean, compliant, actionable insight.",
+                "blurb": "The end-to-end analytical workflow from data cleaning and SQL querying to R programming and visualization  transforming complex electronic health records into clean, compliant, actionable insight.",
             },
             {
                 "name": "Google Business Intelligence",
-                "issuer": "Coursera — Google Career Certificate",
+                "issuer": "Coursera  Google Career Certificate",
                 "year": "2024",
                 "link": "https://coursera.org/verify/professional-cert/B8F3U6D20QBW",
-                "blurb": "Data modeling, ETL pipeline architecture, and dashboard development — unifying disparate hospital records and automating clinical KPI reporting for real-time decision-making.",
+                "blurb": "Data modeling, ETL pipeline architecture, and dashboard development  unifying disparate hospital records and automating clinical KPI reporting for real-time decision-making.",
             },
             {
                 "name": "Data Analytics For Lean Six Sigma",
-                "issuer": "Coursera — University of Amsterdam",
+                "issuer": "Coursera  University of Amsterdam",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/YYBCWL5HTJCM",
-                "blurb": "Statistical hypothesis testing, regression analysis, and Minitab-driven process improvement under the Lean Six Sigma framework — root-causing inefficiencies in hospital workflows and clinical operations.",
+                "blurb": "Statistical hypothesis testing, regression analysis, and Minitab-driven process improvement under the Lean Six Sigma framework  root-causing inefficiencies in hospital workflows and clinical operations.",
             },
             {
                 "name": "Microsoft Power BI Data Analyst",
-                "issuer": "Coursera — Microsoft",
+                "issuer": "Coursera  Microsoft",
                 "year": "2024",
                 "link": "https://coursera.org/verify/professional-cert/8SAFXVFKMO5N",
-                "blurb": "Advanced DAX metric engineering, semantic data modeling, and row-level security — secure executive dashboards tracking hospital operations and patient outcomes while safeguarding sensitive data.",
+                "blurb": "Advanced DAX metric engineering, semantic data modeling, and row-level security  secure executive dashboards tracking hospital operations and patient outcomes while safeguarding sensitive data.",
             },
             {
                 "name": "Tableau BI Analyst",
-                "issuer": "Coursera — Tableau",
+                "issuer": "Coursera  Tableau",
                 "year": "2024",
                 "link": "https://coursera.org/verify/professional-cert/GN4PZ7VUSP3J",
-                "blurb": "Advanced visual analytics, dynamic parameterization, and spatial plotting — turning epidemiological data and patient-flow patterns into intuitive visual stories for clinical leadership.",
+                "blurb": "Advanced visual analytics, dynamic parameterization, and spatial plotting  turning epidemiological data and patient-flow patterns into intuitive visual stories for clinical leadership.",
             },
             {
                 "name": "Executive Data Science Capstone",
-                "issuer": "Coursera — Johns Hopkins University",
+                "issuer": "Coursera  Johns Hopkins University",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/specialization/MALCTXT4K628",
-                "blurb": "Leading end-to-end data science projects, pipeline governance, and executive storytelling — translating clinical models and statistical findings into strategic decisions for health system leaders.",
+                "blurb": "Leading end-to-end data science projects, pipeline governance, and executive storytelling  translating clinical models and statistical findings into strategic decisions for health system leaders.",
             },
             {
                 "name": "A Crash Course in Data Science",
-                "issuer": "Coursera — Johns Hopkins University",
+                "issuer": "Coursera  Johns Hopkins University",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/2ERV3HM5RYFU",
-                "blurb": "Core principles of machine learning, statistical inference, and data science workflows — a practical foundation for evaluating clinical data methodologies against strategic goals.",
+                "blurb": "Core principles of machine learning, statistical inference, and data science workflows  a practical foundation for evaluating clinical data methodologies against strategic goals.",
             },
             {
                 "name": "Managing Data Analysis",
-                "issuer": "Coursera — Johns Hopkins University",
+                "issuer": "Coursera  Johns Hopkins University",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/6HKZWGMXW8PE",
-                "blurb": "Oversight of analytical workflows, statistical model iteration, and pipeline governance — quality-control frameworks that keep clinical analyses reproducible and compliant before they reach decision-makers.",
+                "blurb": "Oversight of analytical workflows, statistical model iteration, and pipeline governance  quality-control frameworks that keep clinical analyses reproducible and compliant before they reach decision-makers.",
             },
             {
                 "name": "Data Science in Real Life",
-                "issuer": "Coursera — Johns Hopkins University",
+                "issuer": "Coursera  Johns Hopkins University",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/YZACWBZLEEYL",
-                "blurb": "Managing messy datasets, unexpected pipeline disruptions, and applied statistical modeling — cleaning incomplete electronic health records and producing reliable insight under real-world conditions.",
+                "blurb": "Managing messy datasets, unexpected pipeline disruptions, and applied statistical modeling  cleaning incomplete electronic health records and producing reliable insight under real-world conditions.",
             },
         ],
     },
@@ -368,59 +368,59 @@ CERTIFICATIONS = [
         "items": [
             {
                 "name": "Strategic Management",
-                "issuer": "Coursera — Copenhagen Business School",
+                "issuer": "Coursera  Copenhagen Business School",
                 "year": None,
                 "link": "https://www.coursera.org/account/accomplishments/verify/BZV246U5373G",
-                "blurb": "A framework for formulating and executing strategy under market volatility and digital disruption — the same lens applied to navigating shifting healthcare policy and payer dynamics.",
+                "blurb": "A framework for formulating and executing strategy under market volatility and digital disruption  the same lens applied to navigating shifting healthcare policy and payer dynamics.",
             },
             {
                 "name": "Strategy Formulation",
-                "issuer": "Coursera — Copenhagen Business School",
+                "issuer": "Coursera  Copenhagen Business School",
                 "year": None,
                 "link": "https://www.coursera.org/account/accomplishments/verify/7GEGT99XPYR5",
-                "blurb": "Tools for identifying growth vectors and designing corporate strategy from market analysis through execution — applied to positioning analytics initiatives around real organizational value.",
+                "blurb": "Tools for identifying growth vectors and designing corporate strategy from market analysis through execution  applied to positioning analytics initiatives around real organizational value.",
             },
             {
                 "name": "Decision-Making &amp; Scenarios",
-                "issuer": "Coursera — University of Pennsylvania",
+                "issuer": "Coursera  University of Pennsylvania",
                 "year": None,
                 "link": "https://www.coursera.org/account/accomplishments/verify/YXH42AHE58CN",
-                "blurb": "Financial modeling, scenario planning, and capital-budgeting methods for stress-testing decisions under uncertainty — the discipline behind turning a readmission model into a defensible ROI case.",
+                "blurb": "Financial modeling, scenario planning, and capital-budgeting methods for stress-testing decisions under uncertainty  the discipline behind turning a readmission model into a defensible ROI case.",
             },
             {
                 "name": "Operations Analytics",
-                "issuer": "Coursera — Wharton, University of Pennsylvania",
+                "issuer": "Coursera  Wharton, University of Pennsylvania",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/FBACTTKB6BGN",
-                "blurb": "Capacity planning, supply chain optimization, and demand forecasting — streamlining hospital bed management, clinical staffing schedules, and pharmaceutical inventory.",
+                "blurb": "Capacity planning, supply chain optimization, and demand forecasting  streamlining hospital bed management, clinical staffing schedules, and pharmaceutical inventory.",
             },
             {
                 "name": "People Analytics",
-                "issuer": "Coursera — Wharton, University of Pennsylvania",
+                "issuer": "Coursera  Wharton, University of Pennsylvania",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/PES32EM9CADV",
-                "blurb": "Workforce planning, performance modeling, and retention analytics — optimizing nurse-to-patient staffing ratios and reducing clinical burnout and turnover.",
+                "blurb": "Workforce planning, performance modeling, and retention analytics  optimizing nurse-to-patient staffing ratios and reducing clinical burnout and turnover.",
             },
             {
                 "name": "Customer Analytics",
-                "issuer": "Coursera — Wharton, University of Pennsylvania",
+                "issuer": "Coursera  Wharton, University of Pennsylvania",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/99F5R86ZCE6W",
-                "blurb": "Patient segmentation, behavioral modeling, and satisfaction tracking — personalizing patient engagement and optimizing telehealth adoption strategies.",
+                "blurb": "Patient segmentation, behavioral modeling, and satisfaction tracking  personalizing patient engagement and optimizing telehealth adoption strategies.",
             },
             {
                 "name": "Accounting Analytics",
-                "issuer": "Coursera — Wharton, University of Pennsylvania",
+                "issuer": "Coursera  Wharton, University of Pennsylvania",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/CHMQ4EGHHZKU",
-                "blurb": "Financial statement modeling, cost accounting, and revenue cycle analysis — optimizing hospital billing workflows and tracking cost-per-patient metrics.",
+                "blurb": "Financial statement modeling, cost accounting, and revenue cycle analysis  optimizing hospital billing workflows and tracking cost-per-patient metrics.",
             },
             {
                 "name": "Business Metrics for Data-Driven Companies",
-                "issuer": "Coursera — Duke University",
+                "issuer": "Coursera  Duke University",
                 "year": "2017",
                 "link": "https://www.coursera.org/account/accomplishments/verify/KVB8BPFJN6D9",
-                "blurb": "Key performance indicators, metric alignment, and data-driven decision frameworks — translating clinical and financial data into metrics that optimize hospital performance and patient satisfaction.",
+                "blurb": "Key performance indicators, metric alignment, and data-driven decision frameworks  translating clinical and financial data into metrics that optimize hospital performance and patient satisfaction.",
             },
         ],
     },
@@ -430,52 +430,52 @@ CERTIFICATIONS = [
         "items": [
             {
                 "name": "Google Project Management",
-                "issuer": "Coursera — Google",
+                "issuer": "Coursera  Google",
                 "year": None,
                 "link": "https://www.coursera.org/account/accomplishments/professional-cert/6FME71P1HTZE",
-                "blurb": "End-to-end project delivery across Waterfall and Agile methodologies — scope, stakeholder management, and quality control for shipping analytics work on time and on budget.",
+                "blurb": "End-to-end project delivery across Waterfall and Agile methodologies  scope, stakeholder management, and quality control for shipping analytics work on time and on budget.",
             },
             {
                 "name": "Google Agile Project Management",
-                "issuer": "Coursera — Google",
+                "issuer": "Coursera  Google",
                 "year": None,
                 "link": "https://www.coursera.org/account/accomplishments/verify/8VZCL5XBADVV",
-                "blurb": "Scrum and Kanban frameworks, backlog management, and sprint retrospectives — running analytics work in short, stakeholder-responsive cycles rather than big-bang releases.",
+                "blurb": "Scrum and Kanban frameworks, backlog management, and sprint retrospectives  running analytics work in short, stakeholder-responsive cycles rather than big-bang releases.",
             },
             {
                 "name": "SAP Business Analyst",
-                "issuer": "Coursera — SAP",
+                "issuer": "Coursera  SAP",
                 "year": "2025",
                 "link": "https://coursera.org/verify/professional-cert/VRQ38MNEYNB2",
-                "blurb": "Enterprise business process modeling, requirements engineering, and SAP S/4HANA module integration — streamlining hospital supply chains and clinical procurement workflows.",
+                "blurb": "Enterprise business process modeling, requirements engineering, and SAP S/4HANA module integration  streamlining hospital supply chains and clinical procurement workflows.",
             },
             {
                 "name": "SAP Technology Consultant",
-                "issuer": "Coursera — SAP",
+                "issuer": "Coursera  SAP",
                 "year": "2025",
                 "link": "https://coursera.org/verify/professional-cert/8B6W3FME5IH6",
-                "blurb": "Technical system architecture, SAP S/4HANA infrastructure implementation, and data integration protocols — securing cross-system pipelines and EHR interoperability while maintaining high availability for critical hospital IT operations.",
+                "blurb": "Technical system architecture, SAP S/4HANA infrastructure implementation, and data integration protocols  securing cross-system pipelines and EHR interoperability while maintaining high availability for critical hospital IT operations.",
             },
             {
                 "name": "Google Cybersecurity (incl. SQL &amp; Python)",
-                "issuer": "Coursera — Google Career Certificate",
+                "issuer": "Coursera  Google Career Certificate",
                 "year": "2025",
                 "link": "https://coursera.org/verify/professional-cert/LXXDXPKA66CQ",
-                "blurb": "Threat modeling, network hardening, and incident response, plus hands-on Python and SQL — grounding for protecting sensitive patient data across healthcare data pipelines.",
+                "blurb": "Threat modeling, network hardening, and incident response, plus hands-on Python and SQL  grounding for protecting sensitive patient data across healthcare data pipelines.",
             },
             {
                 "name": "Strategic Career Self-Management",
-                "issuer": "Coursera — The State University of New York",
+                "issuer": "Coursera  The State University of New York",
                 "year": None,
                 "link": "https://www.coursera.org/account/accomplishments/verify/D4VNCVHCVZJX",
-                "blurb": "Treating a career as a strategic portfolio — market positioning, gap analysis, and personal branding — the same analytical rigor turned inward.",
+                "blurb": "Treating a career as a strategic portfolio  market positioning, gap analysis, and personal branding  the same analytical rigor turned inward.",
             },
             {
                 "name": "What is Social?",
-                "issuer": "Coursera — Northwestern University",
+                "issuer": "Coursera  Northwestern University",
                 "year": None,
                 "link": "https://www.coursera.org/account/accomplishments/verify/4MNL3E3P2KQR",
-                "blurb": "Social media strategy and audience analytics fundamentals — rounding out the toolkit for communicating healthcare analytics work to a wider professional audience.",
+                "blurb": "Social media strategy and audience analytics fundamentals  rounding out the toolkit for communicating healthcare analytics work to a wider professional audience.",
             },
         ],
     },
@@ -485,7 +485,7 @@ def render_certifications_body():
     parts = ['<section class="page-header wrap">',
              '<h1>Certifications</h1>',
              '<p class="lede">27 verified credentials spanning healthcare domain knowledge, '
-             'data science, BI platforms, and strategic delivery — each links to its official '
+             'data science, BI platforms, and strategic delivery  each links to its official '
              'verification page.</p>',
              '</section>']
     for group in CERTIFICATIONS:
@@ -535,7 +535,7 @@ write_page(
           <p>
             Predicts which patients are likely to be readmitted within 30 days of discharge,
             so a care-management team can target a limited-capacity intervention program at
-            the patients who need it most — rather than spreading it thin across everyone.
+            the patients who need it most  rather than spreading it thin across everyone.
           </p>
           <div class="stat-row">
             <div class="stat"><span class="stat-num">0.67</span><span class="stat-label">ROC-AUC, in line with published readmission models</span></div>
@@ -558,13 +558,13 @@ write_page(
           </div>
           <p>
             Evaluates whether a payer's provider network meets access standards across
-            specialty, distance, and wait-time thresholds — and finds a network that looks
+            specialty, distance, and wait-time thresholds  and finds a network that looks
             adequate on paper but isn't adequate in practice.
           </p>
           <div class="stat-row">
             <div class="stat"><span class="stat-num">78.3%</span><span class="stat-label">members fully compliant, all 3 standards</span></div>
             <div class="stat"><span class="stat-num">99.7%</span><span class="stat-label">distance compliance</span></div>
-            <div class="stat"><span class="stat-num">78.6%</span><span class="stat-label">wait-time compliance — the binding constraint</span></div>
+            <div class="stat"><span class="stat-num">78.6%</span><span class="stat-label">wait-time compliance  the binding constraint</span></div>
           </div>
           <div class="project-links">
             <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst">View repository</a>
@@ -583,7 +583,7 @@ write_page(
           <p>
             Identifies which chronic disease patients are likely to miss their next
             guideline-recommended screening or follow-up, so a limited-capacity outreach
-            team knows who to call first — before a missed gap becomes a costly complication.
+            team knows who to call first  before a missed gap becomes a costly complication.
           </p>
           <div class="stat-row">
             <div class="stat"><span class="stat-num">0.716</span><span class="stat-label">ROC-AUC, in line with published care-gap models</span></div>
@@ -605,8 +605,8 @@ write_page(
             <h3>Star Schema Redesign</h3>
           </div>
           <p>
-            Two flat, denormalized datasets — retail order data and a healthcare
-            patient-encounters extract — rebuilt into governed star schemas, with
+            Two flat, denormalized datasets  retail order data and a healthcare
+            patient-encounters extract  rebuilt into governed star schemas, with
             explicit grain, conformed dimensions, and a documented reason behind
             every modeling choice.
           </p>
@@ -634,7 +634,7 @@ write_page(
     """
     <section class="page-header wrap">
       <h1>Case Studies</h1>
-      <p class="lede">Case studies go deeper than the project list — walking through the business problem, the approach, and the measurable outcome.</p>
+      <p class="lede">Case studies go deeper than the project list  walking through the business problem, the approach, and the measurable outcome.</p>
     </section>
 
     <section class="case-study wrap">
@@ -645,15 +645,15 @@ write_page(
       <p>
         Under CMS's Hospital Readmissions Reduction Program, hospitals with excess 30-day
         readmissions face payment penalties of up to 3% of total Medicare inpatient
-        reimbursement — on top of the roughly $15,000 each avoidable readmission costs
+        reimbursement  on top of the roughly $15,000 each avoidable readmission costs
         outright. Care-management teams have enough capacity to actively manage a fraction
-        of discharged patients, so the real question isn't "who might be readmitted" —
+        of discharged patients, so the real question isn't "who might be readmitted" 
         it's "who should we call first."
       </p>
 
       <h3>The approach</h3>
       <p>
-        Three models — logistic regression, random forest, and XGBoost — were trained on
+        Three models  logistic regression, random forest, and XGBoost  were trained on
         encounter-level clinical and demographic features, with class imbalance handled via
         weighting rather than resampling to keep predicted probabilities trustworthy for
         risk-stratification. Models were compared on precision at realistic staffing
@@ -665,8 +665,8 @@ write_page(
 
       <h3>The result</h3>
       <p>
-        The best model reached 0.67 ROC-AUC — in line with published readmission models,
-        including CMS's own — and delivered 2x the baseline precision in the top 10% risk
+        The best model reached 0.67 ROC-AUC  in line with published readmission models,
+        including CMS's own  and delivered 2x the baseline precision in the top 10% risk
         tier. Simulating a transitional-care program targeted at just the top 5% highest-risk
         discharges produced the best return of any capacity tier tested: 1.84x ROI, an
         estimated $918K in annual net savings for a 20,000-discharge hospital.
@@ -684,11 +684,11 @@ write_page(
 
       <h3>The problem</h3>
       <p>
-        Health plans are required — by CMS Medicare Advantage rules, state Medicaid
-        contracts, and NCQA accreditation — to prove their provider networks give members
+        Health plans are required  by CMS Medicare Advantage rules, state Medicaid
+        contracts, and NCQA accreditation  to prove their provider networks give members
         reasonable access to care, typically measured across three dimensions: distance to
         the nearest provider, appointment wait time, and provider-to-member ratio. Failing
-        any of these risks regulatory penalties and corrective action plans — but the
+        any of these risks regulatory penalties and corrective action plans  but the
         deeper risk is members who technically have a network but can't actually get seen.
       </p>
 
@@ -707,12 +707,12 @@ write_page(
       <h3>The result</h3>
       <p>
         The network passes distance (99.7%) and provider-ratio (100%) standards almost
-        everywhere — but appointment wait-time compliance falls to 78.6%, driven by
+        everywhere  but appointment wait-time compliance falls to 78.6%, driven by
         Neurology and Behavioral Health backlogs of 22–46 days. Headcount on the roster
         isn't the same as capacity a member can actually access. A second, counterintuitive
         finding: suburban compliance (70.5%) is worse than rural (85.7%), because dense
         suburban demand overwhelms a thin specialist panel more than sparse rural demand
-        does — a pattern that urban/suburban/rural bucketing alone would miss.
+        does  a pattern that urban/suburban/rural bucketing alone would miss.
       </p>
 
       <div class="cs-links">
@@ -727,20 +727,20 @@ write_page(
 
       <h3>The problem</h3>
       <p>
-        Chronic disease management runs on guideline-recommended screenings and follow-ups —
+        Chronic disease management runs on guideline-recommended screenings and follow-ups 
         HbA1c tests, diabetic eye and foot exams, nephropathy screening, cardiology and
         pulmonary follow-ups. When a patient misses one, the miss is usually silent until it
         turns into a complication: retinopathy that could have been caught early, a CKD
         patient who progresses further before the next visit, a heart failure readmission
         after a missed weight check. A care-management team can only proactively call a
         fraction of an open care-gap registry each cycle, so the real question isn't who has
-        an open gap — it's who will actually miss it if nobody calls first.
+        an open gap  it's who will actually miss it if nobody calls first.
       </p>
 
       <h3>The approach</h3>
       <p>
         A synthetic population of 15,000 chronic disease patients (diabetes, hypertension,
-        CHF, CKD, COPD) was built with realistic utilization, adherence, and access features —
+        CHF, CKD, COPD) was built with realistic utilization, adherence, and access features 
         appointment no-show history, medication adherence, transportation barriers, telehealth
         enrollment, and reminder timing. Three models (logistic regression, random forest,
         XGBoost) were trained to predict whether a patient will miss their next guideline-due
@@ -752,7 +752,7 @@ write_page(
       <h3>The result</h3>
       <p>
         The best model reached 0.716 ROC-AUC and delivered 70% precision in the top 10% risk
-        tier against a 34.6% base rate — a 2x lift. The top SHAP drivers &mdash; days since
+        tier against a 34.6% base rate  a 2x lift. The top SHAP drivers &mdash; days since
         last visit, prior no-show history, reminder staleness, and medication adherence &mdash;
         are almost entirely operational levers, not clinical severity markers, meaning most of
         this gap is closeable through outreach timing rather than a different care plan.
@@ -793,7 +793,7 @@ write_page(
 
       <p>
         Open almost any readmission-model writeup and the first number you'll see is ROC-AUC.
-        0.68. 0.71. 0.65. It's treated like a report card grade — higher is better, and a
+        0.68. 0.71. 0.65. It's treated like a report card grade  higher is better, and a
         model in the 0.70s must be doing something right. For a care-management team deciding
         whether to trust a model with real staffing decisions, that number is close to useless
         on its own, and sometimes actively misleading.
@@ -805,14 +805,14 @@ write_page(
         does the model rank the readmitted patient as higher risk? It's a measure of overall
         ranking quality across every possible threshold, from "flag almost everyone" to "flag
         almost no one." That breadth is exactly the problem. A care-management team doesn't
-        operate across every threshold — they operate at one, maybe two, defined by how many
+        operate across every threshold  they operate at one, maybe two, defined by how many
         nurses they can staff. A metric that averages performance across thresholds the team
         will never use is answering a question nobody asked.
       </p>
 
       <h3>The problem: base rates lie</h3>
       <p>
-        Readmission datasets are imbalanced by nature — roughly 15&ndash;20% of discharges get
+        Readmission datasets are imbalanced by nature  roughly 15&ndash;20% of discharges get
         readmitted within 30 days, so on a typical cohort like the one used in our own
         <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">readmission project</a>,
         about 19.2% of patients are positive cases. ROC-AUC is fairly insensitive to this
@@ -1137,7 +1137,7 @@ write_page(
 write_page(
     "contact.html",
     "Contact",
-    "Get in touch — email, LinkedIn, or GitHub.",
+    "Get in touch  email, LinkedIn, or GitHub.",
     """
     <section class="page-header wrap">
       <h1>Contact</h1>
