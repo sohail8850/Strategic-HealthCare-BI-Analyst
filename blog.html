@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Strategic HealthCare BI Analyst</title>
+<title>Blog  Strategic HealthCare BI Analyst</title>
 <meta name="description" content="Notes on healthcare analytics, model explainability, and translating data into strategy.">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +51,7 @@
 
       <p>
         Open almost any readmission-model writeup and the first number you'll see is ROC-AUC.
-        0.68. 0.71. 0.65. It's treated like a report card grade — higher is better, and a
+        0.68. 0.71. 0.65. It's treated like a report card grade  higher is better, and a
         model in the 0.70s must be doing something right. For a care-management team deciding
         whether to trust a model with real staffing decisions, that number is close to useless
         on its own, and sometimes actively misleading.
@@ -63,14 +63,14 @@
         does the model rank the readmitted patient as higher risk? It's a measure of overall
         ranking quality across every possible threshold, from "flag almost everyone" to "flag
         almost no one." That breadth is exactly the problem. A care-management team doesn't
-        operate across every threshold — they operate at one, maybe two, defined by how many
+        operate across every threshold  they operate at one, maybe two, defined by how many
         nurses they can staff. A metric that averages performance across thresholds the team
         will never use is answering a question nobody asked.
       </p>
 
       <h3>The problem: base rates lie</h3>
       <p>
-        Readmission datasets are imbalanced by nature — roughly 15&ndash;20% of discharges get
+        Readmission datasets are imbalanced by nature  roughly 15&ndash;20% of discharges get
         readmitted within 30 days, so on a typical cohort like the one used in our own
         <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">readmission project</a>,
         about 19.2% of patients are positive cases. ROC-AUC is fairly insensitive to this
