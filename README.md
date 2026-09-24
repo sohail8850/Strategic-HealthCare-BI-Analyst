@@ -2,7 +2,7 @@
 
 **Transforming HealthCare Complexities into Growth Blueprints**
 
-Portfolio of healthcare data analytics projects covering cost & quality, access & network adequacy, chronic disease management, and BI architecture — each with a working repository, an interactive dashboard, and a written case study.
+Portfolio of healthcare data analytics projects covering cost & quality, access & network adequacy, chronic disease management, and BI architecture  each with a working repository, an interactive dashboard, and a written case study.
 
 **Live site:** [sohail8850.github.io/Strategic-HealthCare-BI-Analyst](https://sohail5993.github.io/Strategic-HealthCare-BI-Analyst/)
 
@@ -23,7 +23,7 @@ Each project folder contains its own `README.md` with the full case study (probl
 
 ## Site structure
 
-This repo doubles as the source for the GitHub Pages site above — `index.html`, `projects.html`, `case-studies.html`, `about.html`, etc. at the repo root are the site pages; each project's own folder is self-contained and also browsable directly on GitHub.
+This repo doubles as the source for the GitHub Pages site above  `index.html`, `projects.html`, `case-studies.html`, `about.html`, etc. at the repo root are the site pages; each project's own folder is self-contained and also browsable directly on GitHub.
 
 ## Contact
 
