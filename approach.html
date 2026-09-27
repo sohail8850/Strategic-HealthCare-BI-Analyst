@@ -10,32 +10,74 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --shbi-bg: #eef2f1;
+    --shbi-ink: #10262b;
+    --shbi-body: #3a4a4e;
+    --shbi-line: #c9d3d1;
+    --shbi-teal: #0e6f6b;
+    --shbi-teal-deep: #0a4f4c;
+  }
+  .shbi-header{
+    background: var(--shbi-bg);
+    border-bottom: 1px solid var(--shbi-line);
+    position: sticky; top:0; z-index: 100;
+  }
+  .shbi-wrap{ max-width: 800px; margin: 0 auto; padding: 0 28px; }
+  .shbi-brand-row{
+    display:flex; align-items:center; justify-content:center; gap:16px;
+    padding-top:22px; padding-bottom:14px;
+  }
+  .shbi-logo{ width:52px; height:52px; flex-shrink:0; }
+  .shbi-brand-text{ text-align:center; }
+  .shbi-brand-text .shbi-mark{
+    font-family:'Source Serif 4',Georgia,serif; font-size:1.65rem; font-weight:800;
+    color:var(--shbi-ink); text-decoration:none; letter-spacing:.2px; display:block;
+  }
+  .shbi-brand-text .shbi-tagline{
+    font-family:'Source Serif 4',Georgia,serif; font-style: italic;
+    font-size:1.05rem; color: var(--shbi-teal-deep); margin-top:2px;
+  }
+  .shbi-nav{
+    display:flex; justify-content:center; gap:26px; flex-wrap:wrap;
+    padding-bottom:18px; list-style:none; margin:0;
+  }
+  .shbi-nav-link{
+    font-family:'IBM Plex Sans',-apple-system,sans-serif;
+    font-size: 1.08rem; font-weight:700; color: var(--shbi-body); text-decoration:none;
+    border-bottom: 1px solid transparent; padding-bottom:2px;
+  }
+  .shbi-nav-link:hover{ border-bottom-color: var(--shbi-teal); color: var(--shbi-ink); }
+  .shbi-nav-link.shbi-current{ color: var(--shbi-teal-deep); border-bottom-color: var(--shbi-teal-deep); }
+</style>
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a href="index.html" class="brand-link">
-        <img src="assets/logo.png" alt="Strategic HealthCare BI Analyst logo" class="brand-mark">
-        <div class="brand-block">
-          <span class="brand-name">Strategic HealthCare BI Analyst</span>
-          <span class="brand-tagline">Transforming HealthCare Complexities into Growth Blueprints</span>
-        </div>
-      </a>
-    </div>
-    <nav class="site-nav">
-      <div class="wrap nav-inner">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="approach.html" class="nav-link active">Approach</a>
-        <a href="certifications.html" class="nav-link">Certifications</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="case-studies.html" class="nav-link">Case Studies</a>
-        <a href="blog.html" class="nav-link">Blog</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+  <header class="shbi-header">
+  <div class="shbi-wrap">
+    <div class="shbi-brand-row">
+      <img class="shbi-logo" alt="Strategic HealthCare BI Analyst logo" src="data:image/png;base64,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" />
+      <div class="shbi-brand-text">
+        <a class="shbi-mark" href="index.html">Strategic HealthCare BI Analyst</a>
+        <div class="shbi-tagline">Transforming HealthCare Complexities into Growth Blueprints</div>
       </div>
+    </div>
+    <nav class="shbi-nav">
+      <a class="shbi-nav-link" href="index.html">Home</a>
+      <a class="shbi-nav-link" href="about.html">About</a>
+      <a class="shbi-nav-link shbi-current" href="approach.html">Approach</a>
+      <a class="shbi-nav-link" href="certifications.html">Certifications</a>
+      <a class="shbi-nav-link" href="projects.html">Projects</a>
+      <a class="shbi-nav-link" href="case-studies.html">Case Studies</a>
+      <a class="shbi-nav-link" href="blog.html">Blog</a>
+      <a class="shbi-nav-link" href="contact.html">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
   <main>
 
