@@ -1,0 +1,43 @@
+{
+  "best_model": "Poisson GLM",
+  "backtest": {
+    "Poisson GLM": {
+      "MAE": 3.4592,
+      "WAPE": 0.2551,
+      "WAPE_weekly": 0.0992
+    },
+    "GLM + level correction": {
+      "MAE": 3.5009,
+      "WAPE": 0.2569,
+      "WAPE_weekly": 0.105
+    },
+    "Seasonal naive (4-wk same weekday)": {
+      "MAE": 4.3415,
+      "WAPE": 0.3041,
+      "WAPE_weekly": 0.1633
+    },
+    "Same day last year": {
+      "MAE": 4.7793,
+      "WAPE": 0.3457,
+      "WAPE_weekly": 0.1316
+    }
+  },
+  "census_backtest": {
+    "ICU": {
+      "census_MAPE": 0.1351,
+      "census_MAE": 2.8767,
+      "interval90_coverage": 0.9711
+    },
+    "Med-Surg": {
+      "census_MAPE": 0.0552,
+      "census_MAE": 9.3211,
+      "interval90_coverage": 0.9156
+    },
+    "Step-Down": {
+      "census_MAPE": 0.133,
+      "census_MAE": 4.5289,
+      "interval90_coverage": 0.9044
+    }
+  },
+  "naive_census_mape": 0.14860017209599238
+}
