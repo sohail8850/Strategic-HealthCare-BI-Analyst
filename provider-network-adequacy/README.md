@@ -105,4 +105,4 @@ Requires: `pandas`, `numpy`, `matplotlib`, `scipy`.
 All provider, member, and location data in this project is **synthetically generated** for portfolio demonstration purposes. Coordinates are arbitrary offsets and do not represent real geographic locations, providers, or patients. The adequacy standards table is modeled loosely on public CMS/NCQA/Medicaid MCO frameworks but is simplified and should not be used as an authoritative regulatory reference.
 
 ---
-**Contact:** strategichealthcarebianalyst@gmail.com | [LinkedIn](https://linkedin.com/in/aimms-consulting-35895439) | [Portfolio](https://sohail5993.github.io/Strategic-HealthCare-BI-Analyst/)
+**Contact:** strategichealthcarebianalyst@gmail.com | [LinkedIn](https://linkedin.com/in/aimms-consulting-35895439) | [Portfolio](https://sohail8850.github.io/Strategic-HealthCare-BI-Analyst/)

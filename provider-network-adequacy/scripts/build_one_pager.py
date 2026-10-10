@@ -210,7 +210,7 @@ story.append(Paragraph(
     "All provider, member, and location data is synthetically generated for portfolio demonstration. "
     "Standards are modeled loosely on public CMS/NCQA/Medicaid frameworks (simplified; not an authoritative regulatory reference).<br/>"
     "strategichealthcarebianalyst@gmail.com &nbsp;|&nbsp; linkedin.com/in/aimms-consulting-35895439 &nbsp;|&nbsp; "
-    "sohail5993.github.io/Strategic-HealthCare-BI-Analyst/ &nbsp;|&nbsp; github.com/sohail5993",
+    "sohail8850.github.io/Strategic-HealthCare-BI-Analyst/ &nbsp;|&nbsp; github.com/sohail8850",
     styles["FooterStyle"]))
 
 doc.build(story)

@@ -70,7 +70,7 @@ PAGE_FOOT = """
         <a href="mailto:strategichealthcarebianalyst@gmail.com">Email</a>
         <a href="tel:+923004984892">Phone</a>
         <a href="https://www.linkedin.com/in/aimms-consulting-35895439">LinkedIn</a>
-        <a href="https://github.com/sohail5993">GitHub</a>
+        <a href="https://github.com/sohail8850">GitHub</a>
       </div>
     </div>
   </footer>
@@ -146,7 +146,7 @@ write_page(
           </div>
           <div class="project-links">
             <a href="case-studies.html">Read the case study</a>
-            <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">View repository</a>
+            <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">View repository</a>
           </div>
         </div>
       </article>
@@ -543,7 +543,7 @@ write_page(
             <div class="stat"><span class="stat-num">$918K</span><span class="stat-label">est. annual net savings at a 20K-discharge hospital</span></div>
           </div>
           <div class="project-links">
-            <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">View repository</a>
+            <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">View repository</a>
             <a href="case-studies.html">Read the case study</a>
           </div>
         </div>
@@ -567,7 +567,7 @@ write_page(
             <div class="stat"><span class="stat-num">78.6%</span><span class="stat-label">wait-time compliance  the binding constraint</span></div>
           </div>
           <div class="project-links">
-            <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst">View repository</a>
+            <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst">View repository</a>
             <a href="case-studies.html#provider-network-adequacy">Read the case study</a>
           </div>
         </div>
@@ -591,7 +591,7 @@ write_page(
             <div class="stat"><span class="stat-num">$878K</span><span class="stat-label">est. annual net savings at a 50K-patient panel</span></div>
           </div>
           <div class="project-links">
-            <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst">View repository</a>
+            <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst">View repository</a>
             <a href="case-studies.html#care-gap-prediction">Read the case study</a>
           </div>
         </div>
@@ -616,7 +616,7 @@ write_page(
             <div class="stat"><span class="stat-num">1</span><span class="stat-label">bridge table for a many-to-many fix</span></div>
           </div>
           <div class="project-links">
-            <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/tree/main/star-schema-redesign">View repository</a>
+            <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/tree/main/star-schema-redesign">View repository</a>
           </div>
         </div>
       </article>
@@ -673,8 +673,8 @@ write_page(
       </p>
 
       <div class="cs-links">
-        <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">View repository</a>
-        <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/blob/main/hospital-readmission-prediction/reports/readmission_one_pager.pdf">View one-pager</a>
+        <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">View repository</a>
+        <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/blob/main/hospital-readmission-prediction/reports/readmission_one_pager.pdf">View one-pager</a>
       </div>
     </section>
 
@@ -716,8 +716,8 @@ write_page(
       </p>
 
       <div class="cs-links">
-        <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst">View repository</a>
-        <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/blob/main/outputs/Provider_Network_Adequacy_One_Pager.pdf">View one-pager</a>
+        <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst">View repository</a>
+        <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/blob/main/outputs/Provider_Network_Adequacy_One_Pager.pdf">View one-pager</a>
       </div>
     </section>
 
@@ -762,8 +762,8 @@ write_page(
       </p>
 
       <div class="cs-links">
-        <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst">View repository</a>
-        <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/blob/main/reports/Care_Gap_Prediction_One_Pager.pdf">View one-pager</a>
+        <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst">View repository</a>
+        <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/blob/main/reports/Care_Gap_Prediction_One_Pager.pdf">View one-pager</a>
       </div>
     </section>
 
@@ -814,7 +814,7 @@ write_page(
       <p>
         Readmission datasets are imbalanced by nature  roughly 15&ndash;20% of discharges get
         readmitted within 30 days, so on a typical cohort like the one used in our own
-        <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">readmission project</a>,
+        <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">readmission project</a>,
         about 19.2% of patients are positive cases. ROC-AUC is fairly insensitive to this
         imbalance, which is exactly why it can look respectable while precision at any
         realistic staffing threshold stays weak. A model can rank the full population
@@ -899,7 +899,7 @@ write_page(
 
       <div class="cs-links">
         <a href="case-studies.html#readmission">Read the full case study</a>
-        <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/blob/main/hospital-readmission-prediction/reports/readmission_one_pager.pdf">View the one-pager</a>
+        <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/blob/main/hospital-readmission-prediction/reports/readmission_one_pager.pdf">View the one-pager</a>
       </div>
     </section>
 
@@ -929,7 +929,7 @@ write_page(
       </p>
 
       <h3>Start with the bar chart &mdash; it's the easy one</h3>
-      <img src="https://raw.githubusercontent.com/sohail5993/Strategic-HealthCare-BI-Analyst/main/hospital-readmission-prediction/reports/figures/04_shap_bar.png"
+      <img src="https://raw.githubusercontent.com/sohail8850/Strategic-HealthCare-BI-Analyst/main/hospital-readmission-prediction/reports/figures/04_shap_bar.png"
            alt="SHAP mean absolute feature importance bar chart for the readmission model"
            style="width:100%; max-width:560px; display:block; margin:20px auto;">
       <p style="text-align:center; color:var(--muted); font-size:13px; margin-top:-8px;">
@@ -945,7 +945,7 @@ write_page(
       </p>
 
       <h3>Then the beeswarm plot &mdash; more information, same idea</h3>
-      <img src="https://raw.githubusercontent.com/sohail5993/Strategic-HealthCare-BI-Analyst/main/hospital-readmission-prediction/reports/figures/03_shap_beeswarm.png"
+      <img src="https://raw.githubusercontent.com/sohail8850/Strategic-HealthCare-BI-Analyst/main/hospital-readmission-prediction/reports/figures/03_shap_beeswarm.png"
            alt="SHAP summary beeswarm plot showing global feature impact on 30-day readmission"
            style="width:100%; max-width:640px; display:block; margin:20px auto;">
       <p style="text-align:center; color:var(--muted); font-size:13px; margin-top:-8px;">
@@ -1009,7 +1009,7 @@ write_page(
 
       <div class="cs-links">
         <a href="case-studies.html#readmission">Read the full case study</a>
-        <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction/reports/figures">View the full figure set</a>
+        <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction/reports/figures">View the full figure set</a>
       </div>
     </section>
 
@@ -1082,7 +1082,7 @@ write_page(
       <h3>Why this matters for a model built to reduce readmissions</h3>
       <p>
         If you're building a predictive model &mdash; like the one behind our own
-        <a href="https://github.com/sohail5993/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">readmission project</a>
+        <a href="https://github.com/sohail8850/Strategic-HealthCare-BI-Analyst/tree/main/hospital-readmission-prediction">readmission project</a>
         &mdash; the target label has to match CMS's definition exactly, or the model's risk
         scores won't map onto the dollars actually at stake. A model trained on "any return
         visit within 30 days" will flag a different population than one trained on "unplanned
@@ -1157,9 +1157,9 @@ write_page(
         <span class="contact-label">LinkedIn</span>
         <span class="contact-value">linkedin.com/in/aimms-consulting-35895439</span>
       </a>
-      <a class="contact-item" href="https://github.com/sohail5993">
+      <a class="contact-item" href="https://github.com/sohail8850">
         <span class="contact-label">GitHub</span>
-        <span class="contact-value">github.com/sohail5993</span>
+        <span class="contact-value">github.com/sohail8850</span>
       </a>
     </section>
     """
