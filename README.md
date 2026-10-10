@@ -28,4 +28,4 @@ This repo doubles as the source for the GitHub Pages site above  `index.html`, `
 
 ## Contact
 
-See [contact.html](https://sohail5993.github.io/Strategic-HealthCare-BI-Analyst/contact.html) on the live site, or the links in the site footer.
+See [contact.html](https://sohail8850.github.io/Strategic-HealthCare-BI-Analyst/contact.html) on the live site, or the links in the site footer.
