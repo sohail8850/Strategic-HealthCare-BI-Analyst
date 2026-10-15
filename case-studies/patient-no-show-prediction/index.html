@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient No-Show Prediction Model: From Guessing to Strategic Double-Booking — Strategic HealthCare BI Analyst</title>
+<meta name="description" content="How scoring each scheduled appointment for no-show risk lets a clinic double-book where it pays, and why the booking has to be targeted and capped.">
+<link rel="icon" type="image/png" href="../../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="../../index.html" class="brand-link">
+        <img src="../../assets/logo.png" alt="Strategic HealthCare BI Analyst logo" class="brand-mark">
+        <div class="brand-block">
+          <span class="brand-name">Strategic HealthCare BI Analyst</span>
+          <span class="brand-tagline">Transforming HealthCare Complexities into Growth Blueprints</span>
+        </div>
+      </a>
+    </div>
+    <nav class="site-nav">
+      <div class="wrap nav-inner">
+        <a href="../../index.html" class="nav-link">Home</a>
+        <a href="../../about.html" class="nav-link">About</a>
+        <a href="../../approach.html" class="nav-link">Approach</a>
+        <a href="../../certifications.html" class="nav-link">Certifications</a>
+        <a href="../../projects.html" class="nav-link">Projects</a>
+        <a href="../../case-studies.html" class="nav-link active">Case Studies</a>
+        <a href="../../blog.html" class="nav-link">Blog</a>
+        <a href="../../contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-study wrap">
+      <a href="../../case-studies.html" class="back-link">← All case studies</a>
+
+      <span class="cs-tag" style="color:#8A2D4F; border-color:#8A2D4F;">Predictive Analytics</span>
+      <h2>Patient No-Show Prediction Model: From Guessing to Strategic Double-Booking</h2>
+
+      <div class="headline-finding">
+        <strong>Headline Finding</strong>
+        <p>A no-show model does not remove the double-booking trade-off, it changes the exchange rate. In a published model built on 1.26 million appointments, a flagged appointment was about three times as likely to be missed as the average one (18% against 6%), yet it was still far more likely to be kept than missed. That is why double-booking has to be targeted and capped, not spread across the schedule.</p>
+      </div>
+
+      <h3>The Problem</h3>
+      <p>Clinic schedules are built as if every patient will arrive, and the misses are then absorbed by instinct. Front-desk staff double-book the patients they remember missing before, or a session is padded by a fixed amount for everyone. Both fail in predictable ways. Memory is inconsistent and cannot be audited, and blanket padding crowds the waiting room on the days when most patients turn up. Meanwhile every empty slot is clinician time that cannot be recovered and a place another patient could have been given. The question was never whether to double-book, but which appointments to double-book and how many.</p>
+
+      <h3>The Approach</h3>
+      <p>Each upcoming appointment is scored for its chance of becoming a no-show, using only what is known when the slot is booked: the patient's attendance history, how far ahead the appointment was made, age band, appointment type, and day and time. Published work shows why those inputs matter. In the large rural health-system model cited below, the overall no-show rate was 6.0%, but it rose to 7.7% for appointments booked more than 60 days ahead and 11.8% for patients aged 21 to 30, and fell to 2.9% for patients over 60. A single clinic-wide average hides that spread, and the score is what exposes it.</p>
+      <p style="margin-top:14px;">The scores then drive a rule, not a hunch. Appointments are ranked by risk, extra bookings are placed only against the highest-risk slots, and a daily cap per provider limits how many can be added. The threshold is a business decision as much as a statistical one, because it sets how many collisions a clinic will accept for each slot it recovers.</p>
+
+      <h3>The Outcome</h3>
+      <p>The clearest way to see the value is the arithmetic of one extra booking. If a patient is double-booked against an appointment that has probability <em>p</em> of being missed, the extra patient fills a real gap with probability <em>p</em>, and with probability 1 &minus; <em>p</em> both patients arrive and someone waits. The table applies this to 200 extra bookings, which is two per provider per day over 100 provider-days.</p>
+
+      <table style="border-collapse:collapse; width:100%; max-width:64ch; margin:18px 0; font-size:14.5px;">
+        <thead>
+          <tr style="background:var(--teal); color:#fff; text-align:left;">
+            <th style="padding:10px 12px;">How the extra booking is placed</th>
+            <th style="padding:10px 12px;">Chance the slot is empty</th>
+            <th style="padding:10px 12px;">Slots recovered</th>
+            <th style="padding:10px 12px;">Collisions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:10px 12px;">At random</td>
+            <td style="padding:10px 12px;">6%</td>
+            <td style="padding:10px 12px;">12</td>
+            <td style="padding:10px 12px;">188</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:10px 12px;">Against flagged appointments, at the published hit rate</td>
+            <td style="padding:10px 12px;">18%</td>
+            <td style="padding:10px 12px;">36</td>
+            <td style="padding:10px 12px;">164</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 12px;">Against a stronger signal (assumed, for illustration)</td>
+            <td style="padding:10px 12px;">50%</td>
+            <td style="padding:10px 12px;">100</td>
+            <td style="padding:10px 12px;">100</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:13.5px; color:var(--muted); margin-bottom:14px;">Illustrative arithmetic from the stated probabilities. The 6% and 18% are from the published model; the 50% row is an assumption. A collision means both patients arrive for one slot.</p>
+
+      <p style="margin-top:14px;">Targeting triples the slots recovered, from 12 to 36, but even then most extra bookings collide, because a flagged patient is still more likely to attend than not. That is the reason the authors of the published model capped overbooking at one extra booking for every six at-risk appointments per provider per day, with a maximum of two. A model that is good but not certain supports a modest, capped policy. It does not support filling every gap it points to.</p>
+
+      <p style="margin-top:14px;">Three design rules follow for a clinic adopting this approach. Set the daily cap first and the risk threshold second, so waiting time stays bounded. Track collisions and recovered slots weekly, since those two numbers show whether the threshold is right. And use the score to add a booking, never to take one away: a patient flagged as high risk should keep their appointment and could also receive an extra reminder or call, an option the published authors describe as a next step but did not test.</p>
+
+      <p style="font-size:14px; color:var(--muted); margin-top:18px;"><em>Scope and evidence.</em> This case study draws on published evidence and a worked example with stated assumptions. It does not report results from a model trained on a specific clinic's data; those will be added when the project is published.</p>
+
+      <h3>Source</h3>
+      <p style="font-size:14px;">Shour AR, Jones GL, Anguzu R, Doi SA, Onitilo AA. <em>Development of an evidence-based model for predicting patient, provider, and appointment factors that influence no-shows in a rural healthcare system.</em> BMC Health Services Research. 2023;23:989. <a href="https://link.springer.com/article/10.1186/s12913-023-09969-5" target="_blank" rel="noopener" style="color:var(--teal);">link.springer.com/article/10.1186/s12913-023-09969-5</a></p>
+
+      <div class="cs-links">
+        <a href="../../case-studies.html">Back to all case studies</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>&copy; 2026 Strategic HealthCare BI Analyst. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="../../contact.html">Contact</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/sohail8850" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
