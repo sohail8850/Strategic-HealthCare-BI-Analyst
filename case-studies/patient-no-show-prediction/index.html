@@ -1,197 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Analysis & Current Market Challenges | Aimms Consulting</title>
-    <!-- Tailwind CSS for modern responsive layout -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root {
-            --royal-blue: #0A3D91;
-            --gold: #C9A227;
-        }
-        .bg-royal-blue { background-color: var(--royal-blue); }
-        .text-royal-blue { color: var(--royal-blue); }
-        .bg-gold { background-color: var(--gold); }
-        .text-gold { color: var(--gold); }
-        .border-gold { border-color: var(--gold); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient No-Show Prediction Model: From Guessing to Strategic Double-Booking — Strategic HealthCare BI Analyst</title>
+<meta name="description" content="A synthetic-data case study: scoring every appointment for no-show risk, then testing which double-booking policy pays on months the model never saw.">
+<link rel="icon" type="image/png" href="../../assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body>
 
-    <!-- Header / Navigation -->
-    <header class="bg-royal-blue text-white shadow-md">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <span class="text-2xl font-bold tracking-wider text-white">AIMMS <span class="text-gold">Consulting</span></span>
-            </div>
-            <nav class="hidden md:flex space-x-6 text-sm font-medium">
-                <a href="../../index.html" class="hover:text-gold transition">HOME</a>
-                <a href="../../framework.html" class="hover:text-gold transition">FRAMEWORK</a>
-                <a href="../../services.html" class="hover:text-gold transition">SERVICES</a>
-                <a href="../index.html" class="text-gold">CASE STUDIES</a>
-                <a href="../../contact.html" class="hover:text-gold transition">CONTACT</a>
-            </nav>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="../../index.html" class="brand-link">
+        <img src="../../assets/logo.png" alt="Strategic HealthCare BI Analyst logo" class="brand-mark">
+        <div class="brand-block">
+          <span class="brand-name">Strategic HealthCare BI Analyst</span>
+          <span class="brand-tagline">Transforming HealthCare Complexities into Growth Blueprints</span>
         </div>
-    </header>
+      </a>
+    </div>
+    <nav class="site-nav">
+      <div class="wrap nav-inner">
+        <a href="../../index.html" class="nav-link">Home</a>
+        <a href="../../about.html" class="nav-link">About</a>
+        <a href="../../approach.html" class="nav-link">Approach</a>
+        <a href="../../certifications.html" class="nav-link">Certifications</a>
+        <a href="../../projects.html" class="nav-link">Projects</a>
+        <a href="../../case-studies.html" class="nav-link active">Case Studies</a>
+        <a href="../../blog.html" class="nav-link">Blog</a>
+        <a href="../../contact.html" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="bg-royal-blue text-white py-16 px-6">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-gold text-sm font-semibold uppercase tracking-widest mb-3">Case Studies / MDM Portfolio Analysis & Market Challenges</div>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-                Navigating Pakistan’s 2025 Pharmaceutical Landscape
-            </h1>
-            <p class="text-lg md:text-xl text-slate-200 leading-relaxed mb-8">
-                Strategic Decisions for Portfolio Recovery: Moving from General Generic Availability to High-Value Clinical Advocacy.
-            </p>
-            <div class="flex flex-wrap gap-3">
-                <span class="bg-royal-blue border border-gold text-gold px-3 py-1 rounded-full text-xs font-semibold">Strategic Intelligence</span>
-                <span class="bg-royal-blue border border-gold text-gold px-3 py-1 rounded-full text-xs font-semibold">Pharmaceutical Marketing</span>
-                <span class="bg-royal-blue border border-gold text-gold px-3 py-1 rounded-full text-xs font-semibold">Market Penetration</span>
-            </div>
-        </div>
+  <main>
+    <section class="case-study wrap">
+      <a href="../../case-studies.html" class="back-link">← All case studies</a>
+
+      <span class="cs-tag" style="color:#8A2D4F; border-color:#8A2D4F;">Predictive Analytics</span>
+      <h2>Patient No-Show Prediction Model: From Guessing to Strategic Double-Booking</h2>
+
+      <div class="headline-finding">
+        <strong>Headline Finding</strong>
+        <p>On months the model had never seen, padding two random slots per provider-day lost about $2,476 per 100 provider-days, while double-booking only above a 27% break-even risk gained about $3,953. A simple "who missed before" rule captured most of that gain ($3,127); the model added about 26% on top.</p>
+      </div>
+
+      <h3>The Problem</h3>
+      <p>Clinic schedules are built as if every patient will arrive, and the misses are then absorbed by instinct. Front-desk staff double-book the patients they remember missing before, or a session is padded by a fixed amount for everyone. Both fail in predictable ways. Memory is inconsistent and cannot be audited, and blanket padding crowds the waiting room on the days when most patients turn up. Every empty slot is clinician time that cannot be recovered. The question was never whether to double-book, but which appointments to double-book and how many.</p>
+
+      <h3>The Approach</h3>
+      <p>A synthetic six-provider clinic was built so the method could be tested end to end: 55,070 appointments over two years, with 18.2% missed. Each appointment was scored for no-show risk using only what is known at booking: the patient's earlier attendance, how far ahead it was booked, age, appointment type, insurance, distance, weekday and time of day. The model was trained on the first 15 months, tuned on the next 3, and tested on the final 6. It ranked unseen appointments with an AUC of 0.71, against 0.68 for ranking by miss history alone and a ceiling of 0.78 for a model that knew every patient's true risk. It was also well calibrated: in the riskiest tenth of appointments it predicted 44.1%, and 43.8% were missed.</p>
+      <p style="margin-top:14px;">The policy rule comes from simple arithmetic. An extra booking recovers an empty slot with probability <em>p</em> (assumed worth $120) and causes a collision with probability 1 &minus; <em>p</em> (assumed cost $45), so it pays only when <em>p</em> exceeds 45 / (120 + 45) = 27%. Three policies were then replayed on the 786 held-out provider-days using the real outcomes, each limited to two extra bookings per provider per day.</p>
+
+      <h3>The Outcome</h3>
+      <table style="border-collapse:collapse; width:100%; max-width:64ch; margin:18px 0; font-size:14.5px;">
+        <thead>
+          <tr style="background:var(--teal); color:#fff; text-align:left;">
+            <th style="padding:10px 12px;">Policy</th><th style="padding:10px 12px;">Extra bookings</th><th style="padding:10px 12px;">Slots recovered</th><th style="padding:10px 12px;">Collisions</th><th style="padding:10px 12px;">Hit rate</th><th style="padding:10px 12px;">Net value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:10px 12px;">Flat padding (2 random slots)</td><td style="padding:10px 12px;">200</td><td style="padding:10px 12px;">31</td><td style="padding:10px 12px;">139</td><td style="padding:10px 12px;">18%</td><td style="padding:10px 12px; white-space:nowrap;">−$2,476</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);">
+            <td style="padding:10px 12px;">Front-desk rule (prior miss)</td><td style="padding:10px 12px;">200</td><td style="padding:10px 12px;">65</td><td style="padding:10px 12px;">105</td><td style="padding:10px 12px;">38%</td><td style="padding:10px 12px;">$3,127</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--rule);font-weight:600;">
+            <td style="padding:10px 12px;">Model at break-even risk</td><td style="padding:10px 12px;">179</td><td style="padding:10px 12px;">65</td><td style="padding:10px 12px;">87</td><td style="padding:10px 12px;">43%</td><td style="padding:10px 12px;">$3,953</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:13.5px; color:var(--muted); margin-bottom:14px;">Per 100 provider-days on the test months. Hit rate is the share of extra bookings that landed in a real gap. Net value is slots recovered times $120, less collisions times $45, on synthetic data and assumed costs.</p>
+
+      <p>Padding at random recovered only 18% of the time, which is just the clinic's base rate, so it lost money. Targeting changed the exchange rate: the model policy filled a real gap 43% of the time. The surprise is how much of the value sat in a patient's own history. The front-desk rule netted $3,127, and the model added $826 per 100 provider-days, roughly $12,900 a year for six providers. Most of the gain came from replacing blanket padding with any targeted rule.</p>
+
+      <p style="margin-top:14px;">Three results held up under testing. The break-even threshold set from the costs landed within three points of the empirical optimum on both the validation and test months. The model policy stayed positive in 7 of 7 cost scenarios, against 6 for the front-desk rule and 1 for flat padding. And a cap of two extra bookings per provider-day is a limit on waiting, not a profit lever: each extra booking above the threshold still paid, but with shrinking returns and rising collisions.</p>
+
+      <p style="margin-top:14px;">One result needs care. Flags were not spread evenly: Medicaid patients were 21% of appointments but 39% of flags, and patients aged 18 to 30 were 22% of appointments but 42% of flags. The flags were about equally precise across groups, so the model is not wrongly accusing one group, but a flag should add a booking, never remove one, and the short-notice patient should be the one who waits.</p>
+
+      <p style="margin-top:14px;">The result is consistent with published work. A model built on 1.26 million real appointments found the same structure: flagged appointments were about three times as likely to be missed as average (18% against 6%), yet still more likely to be kept than missed, so its authors capped overbooking at two per provider per day.</p>
+
+      <p style="font-size:14px; color:var(--muted); margin-top:18px;"><em>Scope and evidence.</em> All results come from a synthetic clinic with assumed costs. They show how the method works, not what a real clinic should expect, and real no-show patterns, waitlists and costs should be tested before use.</p>
+
+      <h3>Source</h3>
+      <p style="font-size:14px;">Shour AR, Jones GL, Anguzu R, Doi SA, Onitilo AA. <em>Development of an evidence-based model for predicting patient, provider, and appointment factors that influence no-shows in a rural healthcare system.</em> BMC Health Services Research. 2023;23:989. <a href="https://link.springer.com/article/10.1186/s12913-023-09969-5" target="_blank" rel="noopener" style="color:var(--teal);">link.springer.com/article/10.1186/s12913-023-09969-5</a></p>
+
+      <div class="cs-links">
+        <a href="../../patient-no-show-prediction/">View full project and interactive charts →</a>
+        <a href="../../case-studies.html">Back to all case studies</a>
+      </div>
     </section>
+  </main>
 
-    <!-- Main Content Area -->
-    <main class="max-w-4xl mx-auto px-6 py-12">
-        
-        <!-- Historical Reference Box -->
-        <div class="bg-white border-l-4 border-gold p-6 rounded-r-lg shadow-sm mb-10">
-            <h3 class="text-royal-blue font-bold text-lg mb-2">Historical Benchmarking & Precedent</h3>
-            <p class="text-slate-700 italic text-sm leading-relaxed">
-                "Apart from our overall robust business increase for Green Team from November 2005 to May 2007, we were having a huge business increase in one of the high value product i.e LVOPRAID 25mg from 9000 packs to 40,000 packs monthly average. As result of this, more than 14 me-too brands got the registration in 2007 by different companies, in whole Pakistan."
-            </p>
-        </div>
-
-        <!-- Section 1 -->
-        <article class="bg-white rounded-xl shadow-sm p-8 mb-10 border border-slate-100">
-            <h2 class="text-2xl font-bold text-royal-blue mb-4 pb-2 border-b-2 border-gold inline-block">1. Portfolio Analysis & Current Market Challenges</h2>
-            <p class="text-slate-700 mb-6 leading-relaxed">
-                As of late 2025, the Pakistani market is heavily driven by price hikes rather than unit volume growth (3.63% unit growth vs. 20.6% value growth). Your 2025 product launches (Bevis, Dowsul, Meropenex, Prelin, SCal One-D, and Triphage LXR) face distinct structural headwinds:
-            </p>
-            <ul class="space-y-3 text-slate-700">
-                <li class="flex items-start">
-                    <span class="text-gold font-bold mr-2">▪</span>
-                    <div><strong>High Competition:</strong> Established generic players (Getz, Sami, Hilton) dominate these core molecules.</div>
-                </li>
-                <li class="flex items-start">
-                    <span class="text-gold font-bold mr-2">▪</span>
-                    <div><strong>Pricing Sensitivity:</strong> In an out-of-pocket market, price remains the primary barrier for new brand adoption.</div>
-                </li>
-                <li class="flex items-start">
-                    <span class="text-gold font-bold mr-2">▪</span>
-                    <div><strong>Specialty Access:</strong> High-value products like Meropenem and Pregabalin require high-touch engagement with consultants which may be lacking.</div>
-                </li>
-            </ul>
-        </article>
-
-        <!-- Section 2: Segment-Specific Strategic Approaches -->
-        <article class="bg-white rounded-xl shadow-sm p-8 mb-10 border border-slate-100">
-            <h2 class="text-2xl font-bold text-royal-blue mb-6 pb-2 border-b-2 border-gold inline-block">2. Segment-Specific Strategic Approaches</h2>
-            
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Bevis -->
-                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                    <span class="text-xs font-bold text-gold uppercase tracking-wider">Cardiology</span>
-                    <h3 class="text-lg font-bold text-royal-blue mb-2">Bevis (Nebivolol)</h3>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Challenge:</strong> Beta-blockers are an overcrowded class.</p>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Strategy:</strong> Focus on "Vasodilation & Tolerability" for hypertensive patients with erectile dysfunction or metabolic syndrome.</p>
-                    <p class="text-sm text-slate-600"><strong>Tactics:</strong> Target Cardiologists/Diabetologists with a Patient Compliance Program emphasizing low side-effect profiles.</p>
-                </div>
-
-                <!-- Dowsul -->
-                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                    <span class="text-xs font-bold text-gold uppercase tracking-wider">Gastro & Psychiatry</span>
-                    <h3 class="text-lg font-bold text-royal-blue mb-2">Dowsul (Levosulpiride)</h3>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Challenge:</strong> Perceived as a "me-too" prokinetic.</p>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Strategy:</strong> Dual positioning for "Dyspepsia + Stress-Induced GI issues."</p>
-                    <p class="text-sm text-slate-600"><strong>Tactics:</strong> CME programs for GPs and Gastroenterologists focusing on the "Brain-Gut Axis."</p>
-                </div>
-
-                <!-- Meropenex -->
-                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                    <span class="text-xs font-bold text-gold uppercase tracking-wider">Critical Care / Hospital</span>
-                    <h3 class="text-lg font-bold text-royal-blue mb-2">Meropenex (Meropenem)</h3>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Challenge:</strong> Drop in antibiotic unit sales and high institutional competition.</p>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Strategy:</strong> "Institutional Stewardship & Quality Assurance."</p>
-                    <p class="text-sm text-slate-600"><strong>Tactics:</strong> Provide bioequivalence data to Hospital Procurement Committees.</p>
-                </div>
-
-                <!-- Prelin -->
-                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                    <span class="text-xs font-bold text-gold uppercase tracking-wider">Neuro-Pain</span>
-                    <h3 class="text-lg font-bold text-royal-blue mb-2">Prelin (Pregabalin)</h3>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Challenge:</strong> Severe regulatory scrutiny due to rising abuse trends.</p>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Strategy:</strong> "Responsible Pain Management."</p>
-                    <p class="text-sm text-slate-600"><strong>Tactics:</strong> Focus on Neurologists/Orthopedics with safety packaging and controlled dispensing education.</p>
-                </div>
-
-                <!-- SCal One-D -->
-                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                    <span class="text-xs font-bold text-gold uppercase tracking-wider">Bone Health</span>
-                    <h3 class="text-lg font-bold text-royal-blue mb-2">SCal One-D (Ossein Mineral Complex + D3)</h3>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Challenge:</strong> Dominated by established brands like Ossopan or Cac-1000.</p>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Strategy:</strong> "Bioavailability & Bone Density."</p>
-                    <p class="text-sm text-slate-600"><strong>Tactics:</strong> Promote "The Complete Bone Meal" concept targeting Gynaecologists and Orthopedics.</p>
-                </div>
-
-                <!-- Triphage LXR -->
-                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                    <span class="text-xs font-bold text-gold uppercase tracking-wider">Diabetes</span>
-                    <h3 class="text-lg font-bold text-royal-blue mb-2">Triphage LXR (Metformin XR + SGLT2/DPP4)</h3>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Challenge:</strong> High local treatment cost.</p>
-                    <p class="text-sm text-slate-600 mb-2"><strong>Strategy:</strong> "Cardio-Renal Protection."</p>
-                    <p class="text-sm text-slate-600"><strong>Tactics:</strong> Market "Extra-Glycemic" organ protection benefits to Diabetologists.</p>
-                </div>
-            </div>
-        </article>
-
-        <!-- Section 3: Action Plan Table -->
-        <article class="bg-white rounded-xl shadow-sm p-8 mb-10 border border-slate-100">
-            <h2 class="text-2xl font-bold text-royal-blue mb-6 pb-2 border-b-2 border-gold inline-block">3. Core Business Development Action Plan (Q1 2026)</h2>
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-royal-blue text-white text-sm">
-                            <th class="p-3">Action Item</th>
-                            <th class="p-3">Description</th>
-                            <th class="p-3">Expected Outcome</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm divide-y divide-slate-200">
-                        <tr>
-                            <td class="p-3 font-semibold text-royal-blue">Sales Rep Upskilling</td>
-                            <td class="p-3 text-slate-700">Retrain field force on "Clinical Selling" rather than "Feature Selling."</td>
-                            <td class="p-3 text-slate-600">Higher quality doctor interactions.</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-semibold text-royal-blue">Digital Omnichannel</td>
-                            <td class="p-3 text-slate-700">Use WhatsApp/Social Media for HCP (Healthcare Provider) engagement.</td>
-                            <td class="p-3 text-slate-600">Increase share of mind for low-performing brands.</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-semibold text-royal-blue">Value-Added Services</td>
-                            <td class="p-3 text-slate-700">Offer free BMD tests (SCal) or Nerve Conduction tests (Prelin).</td>
-                            <td class="p-3 text-slate-600">Build doctor loyalty through patient service.</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-semibold text-royal-blue">Pricing Review</td>
-                            <td class="p-3 text-slate-700">Benchmark against the top 3 market leaders.</td>
-                            <td class="p-3 text-slate-600">Adjust trade offers to ensure pharmacy shelf space.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </article>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-royal-blue text-slate-300 py-8 text-center text-sm border-t border-gold">
-        <p>&copy; 2026 Aimms Consulting. All rights reserved. Let's Color The Daring Dreams Together.</p>
-    </footer>
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>&copy; 2026 Strategic HealthCare BI Analyst. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="../../contact.html">Contact</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/sohail8850" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
