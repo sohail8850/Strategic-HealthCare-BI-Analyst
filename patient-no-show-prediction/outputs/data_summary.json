@@ -1,0 +1,9 @@
+{
+ "n_appointments": 55070,
+ "no_show_rate": 0.1824950063555475,
+ "oracle_test_auc": 0.7761026704127952,
+ "n_patients": 6733,
+ "provider_days": 3132,
+ "start": "2024-10-01",
+ "end": "2026-09-30"
+}

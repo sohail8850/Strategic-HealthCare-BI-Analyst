@@ -1,0 +1,8 @@
+{
+ "chosen": "Logistic regression",
+ "n_train": 34573,
+ "n_val": 6694,
+ "n_test": 13803,
+ "base_rate_train": 0.18230989500477252,
+ "base_rate_test": 0.18416286314569297
+}
