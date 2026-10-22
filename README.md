@@ -19,6 +19,7 @@ Portfolio of healthcare data analytics projects covering cost & quality, access 
 | Length-of-Stay (LOS) Prediction / Cost-of-Care Modeling | Cost & Quality | [`los-prediction-cost-of-care/`](./los-prediction-cost-of-care) |
 | Claims Denial & Revenue Cycle Analysis | Cost & Quality | [`claims-denial-revenue-cycle-analysis/`](./claims-denial-revenue-cycle-analysis) |
 | Healthcare Resource Optimization: Beds, Staffing & Equipment | Capacity & Operations | [`healthcare-resource-optimization/`](./healthcare-resource-optimization) |
+| Patient No-Show Prediction Model | Predictive Analytics | [`patient-no-show-prediction/`](patient-no-show-prediction/) |
 
 Each project folder contains its own `README.md` with the full case study (problem, approach, result), a `dashboard.html`, and the underlying data/scripts.
 
